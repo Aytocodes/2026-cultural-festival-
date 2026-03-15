@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cultural Event Promotion</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+}
+
+/* Banner */
+.banner {
+    background-color: darkred; /* fallback color if image fails */
+    background-image: url('Thaba-busiu.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner h1 {
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.banner h1 span {
+    display: inline-block;
+    animation: wave 1.5s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.1s);
+}
+
+/* Wave animation: letters move up and down */
+@keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.container {
+    padding: 30px;
+}
+
+.info {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 20px;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.nav-link.active {
+    color: #ffd700; /* Gold color for active page */
+}
+
+.nav-link.active::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #ffd700; /* underline for active page */
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+/* NAVIGATION BAR */ nav { display: flex; justify-content: center; /* center links horizontally */ align-items: center; background: rgba(46, 139, 87, 0.9); /* semi-transparent green */ padding: 15px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.3); border-radius: 10px; margin: 20px auto; max-width: 900px; } /* NAV LINKS */ nav a { color: white; text-decoration: none; font-weight: bold; font-size: 18px; margin: 0 25px; position: relative; transition: all 0.3s ease; } /* HOVER EFFECT */ nav a::after { content: ''; display: block; height: 3px; width: 0; background: #ffd700; /* gold underline on hover */ transition: width 0.3s; position: absolute; bottom: -5px; left: 0; } nav a:hover::after { width: 100%; } nav a:hover { color: #ffd700; /* text changes to gold on hover */ } /* MOBILE RESPONSIVE */ @media screen and (max-width: 600px) { nav { flex-direction: column; padding: 10px 0; } nav a { margin: 10px 0; font-size: 16px; }}
+</style>
+</head>
+
+<body>
+    <nav>
+    <a href="index.html" class="nav-link">Home</a>
+   <a href="About.html" class="nav-link">About</a>
+     <a href="schedule.html" class="nav-link">Schedule</a>
+      <a href="Tickets&Registration.html" class="nav-link">Tickets & Registration</a>
+       <a href="Contact.html" class="nav-link">contact us</a>
+    </nav>
+<div class="banner">
+  <h1>
+<span style="--i:0">C</span><span style="--i:1">u</span><span style="--i:2">l</span><span style="--i:3">t</span><span style="--i:4">u</span><span style="--i:5">r</span><span style="--i:6">a</span><span style="--i:7">l</span>
+<span style="--i:7">&nbsp;</span> 
+<span style="--i:8">H</span><span style="--i:9">e</span><span style="--i:10">r</span><span style="--i:11">i</span><span style="--i:12">t</span><span style="--i:13">a</span><span style="--i:14">g</span><span style="--i:15">e</span>
+<span style="--i:16">&nbsp;</span> 
+<span style="--i:17">F</span><span style="--i:18">e</span><span style="--i:19">s</span><span style="--i:20">t</span><span style="--i:21">i</span><span style="--i:22">v</span><span style="--i:23">a</span><span style="--i:24">l</span>
+<span style="--i:25">&nbsp;</span> 
+<span style="--i:26">2</span><span style="--i:27">0</span><span style="--i:28">2</span><span style="--i:29">6</span>
+  </h1>
+</div>
+
+<div class="container">
+
+<h2>Event Overview</h2>
+<p>
+The Cultural Heritage Festival is a celebration of music, dance, food, and traditions
+from different cultures. Visitors will enjoy performances, exhibitions, and cultural
+activities that bring communities together.
+</p>
+
+<div class="info">
+<h3>Event Date</h3>
+<p>15 June 2026</p>
+
+<h3>Location</h3>
+<p>Thaba-Bosiu cultural village</p>
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 Cultural Festival</p>
+</footer>
+<script>
+    const links = document.querySelectorAll('.nav-link');
+    const currentPage = window.location.pathname.split("/").pop();
+
+    links.forEach(link => {
+        if(link.getAttribute('href') === currentPage){
+            link.classList.add('active');
+        }
+    });
+</script>
+
+</body>
+</html>
